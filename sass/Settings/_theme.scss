@@ -1,0 +1,33 @@
+
+@import "../Tokens/colors";
+
+
+@mixin apply-theme($theme) {
+    $primary: map-get($theme, primary);
+    $secondary: map-get($theme, secondary);
+    $tertiary: map-get($theme, tertiary);
+    $quaternary: map-get($theme, quaternary);
+  
+    .button {
+      color: $secondary;
+      border-color: $tertiary;
+    }
+  }
+  
+  
+  // Apply theme 1
+  @include apply-theme((
+    primary: $theme-1-primary,
+    secondary: $theme-1-secondary,
+    tertiary: $theme-1-tertiary,
+    quaternary: $theme-1-quaternary
+  
+  ));
+  
+  // // Apply theme 2
+  // @include apply-theme((
+  //   primary: $theme-2-primary,
+  //   secondary: $theme-2-secondary,
+  //   tertiary: $theme-2-tertiary,
+  //   quaternary: $theme-2-quaternary
+  // ));
