@@ -1,0 +1,8 @@
+@import "colors";
+
+
+@mixin border-thin-solid {
+    border: 1px solid $gray300;
+}
+
+

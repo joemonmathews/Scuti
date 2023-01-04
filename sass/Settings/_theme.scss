@@ -8,10 +8,10 @@
     $tertiary: map-get($theme, tertiary);
     $quaternary: map-get($theme, quaternary);
   
-    .button {
-      color: $secondary;
-      border-color: $tertiary;
-    }
+    // .button {
+    //   color: $secondary;
+    //   border-color: $tertiary;
+    // }
   }
   
   

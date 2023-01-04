@@ -16,10 +16,76 @@
 /* =============================================================================
 - Reset Stylesheet
 ============================================================================= */
+/* Reset styles for all elements */
 @import url("https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@300;400;500;600&display=swap");
-.button {
-  color: #D21380;
-  border-color: #FD83CB;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset font styles */
+html {
+  font-size: 100%;
+}
+
+/* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset input styles */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button],
+button {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
+input[type=tel],
+input[type=search],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Reset select styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
 }
 
 /* =============================================================================
@@ -30,4 +96,116 @@ body {
   line-height: 1.5;
   font-family: "Work Sans", sans-serif;
   color: #0E151C;
+}
+
+/* =============================================================================
+- Atoms
+============================================================================= */
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #C8C8C8;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn.btn-primary {
+  background-color: #FD34AA;
+  border-color: #FD34AA;
+  color: #FFFFFF;
+}
+.btn.btn-primary:hover {
+  background-color: #fc0295;
+}
+.btn.btn-primary:active {
+  background-color: #e20286;
+}
+.btn.btn-secondary {
+  border: 1px solid #C8C8C8;
+  background: none;
+}
+.btn.btn-destructive {
+  background-color: #dc0011;
+  border-color: #dc0011;
+  color: #FFFFFF;
+}
+.btn.btn-destructive:hover {
+  background-color: #a9000d;
+}
+.btn.btn-destructive:active {
+  background-color: #90000b;
+}
+.btn.btn-naked {
+  border: none;
+  background: none;
+}
+.btn.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* =============================================================================
+- Molecules
+============================================================================= */
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+[class^=col-] {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
 }

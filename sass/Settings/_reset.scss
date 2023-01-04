@@ -1,0 +1,70 @@
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset font styles */
+html {
+  font-size: 100%;
+}
+
+/* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset input styles */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Reset select styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+}

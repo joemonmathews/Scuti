@@ -1,0 +1,47 @@
+
+
+@mixin btn-variation($color) {
+    background-color: $color;
+    border-color: $color;
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+    &:active {
+        background-color: darken($color, 15%);
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-size: $font-size-medium;
+    font-weight: $font-semibold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+    @include border-thin-solid;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &.btn-primary {
+        @include btn-variation($theme-1-primary);
+        color: $gray0;
+    }
+    &.btn-secondary {
+        @include border-thin-solid;
+        background: none;
+    }
+    &.btn-destructive {
+        @include btn-variation($red600);
+        color: $gray0;
+    }
+    &.btn-naked {
+        border: none;
+        background: none;
+    }
+    &.is-disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

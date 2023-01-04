@@ -1,0 +1,21 @@
+
+
+$columns: 12;
+$gutter: 20px;
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: (100% / $columns) * $i;
+  }
+}
+
+[class^="col-"] {
+  float: left;
+//   margin-right: $gutter;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
