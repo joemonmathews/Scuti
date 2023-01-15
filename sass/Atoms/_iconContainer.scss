@@ -1,0 +1,38 @@
+$icon-small-size: 20px;
+$icon-medium-size: 32px;
+$icon-large-size: 46px;
+
+.icon-container {
+  width: $icon-small-size;
+  height: $icon-small-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-small {
+  width: $icon-small-size;
+  height: $icon-small-size;
+}
+
+.icon-medium {
+  width: $icon-medium-size;
+  height: $icon-medium-size;
+}
+
+.icon-large {
+  width: $icon-large-size;
+  height: $icon-large-size;
+}
+
+// Usage
+
+// <div class="icon-container icon-small">
+//   <i class="fas fa-home"></i>
+// </div>
+// <div class="icon-container icon-medium">
+//   <i class="fas fa-envelope"></i>
+// </div>
+// <div class="icon-container icon-large">
+//   <i class="fas fa-user"></i>
+// </div>

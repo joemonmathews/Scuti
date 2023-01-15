@@ -1,0 +1,61 @@
+$popover-bg-color: #fff;
+$popover-text-color: #333;
+$popover-arrow-size: 5px;
+
+.popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  background-color: $popover-bg-color;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+}
+
+.popover-header {
+  padding: 8px 14px;
+  margin-bottom: 0;
+  background-color: $popover-bg-color;
+  border-bottom: 1px solid #ebebeb;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.popover-body {
+  padding: 9px 14px;
+  color: $popover-text-color;
+}
+
+.popover::before, .popover::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.popover::before {
+  content: "";
+  border-width: $popover-arrow-size;
+  margin-top: -$popover-arrow-size;
+}
+
+.popover::after {
+  content: "";
+  border-width: $popover-arrow-size;
+}
+
+
+// <div class="popover">
+//   <div class="popover-header">
+//     <h3>Popover Title</h3>
+//   </div>
+//   <div class="popover-body">
+//     <p>Popover content goes here.</p>
+//   </div>
+// </div>

@@ -1,0 +1,64 @@
+$switch-bg-color: #f5f5f5;
+$switch-handle-color: #fff;
+$switch-on-color: #28a745;
+$switch-off-color: #6c757d;
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: $switch-bg-color;
+  border-radius: 17px;
+  transition: background-color .2s ease-in-out;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $switch-handle-color;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .switch-slider {
+  background-color: $switch-on-color;
+}
+
+input:checked + .switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* switch off state */
+input:not(:checked) + .switch-slider {
+  background-color: $switch-off-color;
+}
+
+// Usage
+
+// <label class="switch">
+//   <input type="checkbox">
+//   <span class="switch-slider"></span>
+// </label>

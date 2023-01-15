@@ -1,0 +1,26 @@
+
+$toast-bg-color: #fff;
+$toast-text-color: #333;
+$toast-padding: 10px;
+$toast-font-size: 14px;
+$toast-border-radius: 4px;
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: $toast-padding;
+  font-size: $toast-font-size;
+  background-color: $toast-bg-color;
+  color: $toast-text-color;
+  border-radius: $toast-border-radius;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(100%);
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+// <div class="toast" id="my-toast">This is a Toast message</div>

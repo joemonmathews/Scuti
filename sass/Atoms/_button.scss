@@ -1,47 +1,123 @@
 
-
-@mixin btn-variation($color) {
-    background-color: $color;
-    border-color: $color;
-    &:hover {
-        background-color: darken($color, 10%);
-    }
-    &:active {
-        background-color: darken($color, 15%);
-    }
-}
+$primary-color: $theme-1-primary;
+$secondary-color: $theme-1-secondary;
+$tertiary-color: $theme-1-tertiary;
+$text-color: $gray0;
 
 .btn {
-    display: inline-block;
-    font-size: $font-size-medium;
-    font-weight: $font-semibold;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    padding: $spacing-sm $spacing-md;
-    border-radius: 4px;
-    @include border-thin-solid;
-    transition: all 0.2s;
-    cursor: pointer;
-
-    &.btn-primary {
-        @include btn-variation($theme-1-primary);
-        color: $gray0;
-    }
-    &.btn-secondary {
-        @include border-thin-solid;
-        background: none;
-    }
-    &.btn-destructive {
-        @include btn-variation($red600);
-        color: $gray0;
-    }
-    &.btn-naked {
-        border: none;
-        background: none;
-    }
-    &.is-disabled {
-        opacity: 0.4;
-        pointer-events: none;
-    }
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
 }
+
+.btn-primary {
+  background-color: $primary-color;
+  color: $text-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: $text-color;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-tertiary {
+  background-color: $tertiary-color;
+  color: $text-color;
+  &:hover {
+    background-color: darken($tertiary-color, 10%);
+  }
+}
+
+.btn-ghost {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  &:hover {
+    color: $text-color;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $primary-color;
+  }
+}
+
+.btn-naked {
+  background-color: transparent;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+
+// <button class="btn btn-primary">Primary Button</button>
+// <button class="btn btn-secondary">Secondary Button</button>
+// <button class="btn btn-tertiary">Tertiary Button</button>
+// <button class="btn btn-ghost">Ghost Button</button>
+// <button class="btn btn-naked">Naked Button</button>
+
+
+
+
+
+
+
+// @mixin btn-variation($color) {
+//     background-color: $color;
+//     border-color: $color;
+//     &:hover {
+//         background-color: darken($color, 10%);
+//     }
+//     &:active {
+//         background-color: darken($color, 15%);
+//     }
+// }
+
+// .btn {
+//     display: inline-block;
+//     font-size: $font-size-medium;
+//     font-weight: $font-semibold;
+//     text-align: center;
+//     white-space: nowrap;
+//     vertical-align: middle;
+//     padding: $spacing-sm $spacing-md;
+//     border-radius: 4px;
+//     @include border-thin-solid;
+//     transition: all 0.2s;
+//     cursor: pointer;
+
+//     &.btn-primary {
+//         @include btn-variation($theme-1-primary);
+//         color: $gray0;
+//     }
+//     &.btn-secondary {
+//         @include border-thin-solid;
+//         background: none;
+//     }
+//     &.btn-destructive {
+//         @include btn-variation($red600);
+//         color: $gray0;
+//     }
+//     &.btn-naked {
+//         border: none;
+//         background: none;
+//     }
+//     &.is-disabled {
+//         opacity: 0.4;
+//         pointer-events: none;
+//     }
+// }

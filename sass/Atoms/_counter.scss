@@ -1,0 +1,24 @@
+$counter-colors: (
+  red: $red600,
+  green: $green600,
+  orange: $orange600
+);
+
+@each $counter-type, $color in $counter-colors {
+  .counter-#{$counter-type} {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color;
+    color: white;
+    font-size: 12px;
+  }
+}
+
+
+// <div class="counter-red">5</div>
+// <div class="counter-green">10</div>
+// <div class="counter-orange">15</div>

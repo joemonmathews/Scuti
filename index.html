@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scuti</title>
+    <!-- Include the highlight.js CSS file -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="assets/tabby-ui.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  </head>
+
+  <body>
+
+	<ul data-tabs>
+		<li><a data-tabby-default href="#html">HTML</a></li>
+		<li><a href="#sass">SASS</a></li>
+	</ul>
+
+	<div id="html">
+        HTML
+	</div>
+
+	<div id="sass">
+		SASS
+	</div>
+
+	
+
+	
+    <script src="assets/tabby.js"></script>
+	<script>
+		var tabs = new Tabby('[data-tabs]');
+	</script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+
+  </body>
+</html>

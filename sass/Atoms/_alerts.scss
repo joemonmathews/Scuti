@@ -1,0 +1,20 @@
+
+$alert-colors: (
+    success: $red600,
+    failure: $green600,
+    neutral: $orange600
+  );
+  
+  @each $alert-type, $color in $alert-colors {
+    .alert-#{$alert-type} {
+      padding: 10px;
+      color: white;
+      background-color: $color;
+      border-radius: 5px;
+      text-align: center;
+      min-height: 50px;
+      position: absolute;
+      top: 0;
+    }
+  }
+  

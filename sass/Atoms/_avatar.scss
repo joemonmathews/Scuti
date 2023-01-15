@@ -1,0 +1,30 @@
+$avatar-sizes: (
+  xsmall: 20px,
+  small: 40px,
+  medium: 60px,
+  large: 80px,
+  xlarge: 100px,
+  xxlarge: 120px
+);
+
+$avatar-radius: 50%;
+$avatar-font-sizes: (
+  xsmall: 14px,
+  small: 18px,
+  medium: 22px,
+  large: 26px,
+  xlarge: 30px,
+  xxlarge: 34px
+);
+
+@each $size, $value in $avatar-sizes {
+  .avatar-#{$size} {
+    width: $value;
+    height: $value;
+    border-radius: $avatar-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: map-get($avatar-font-sizes, $size);
+  }
+}

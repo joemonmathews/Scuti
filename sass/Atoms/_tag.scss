@@ -1,0 +1,40 @@
+$tag-bg-color: #ddd;
+$tag-text-color: #333;
+$tag-font-size: 12px;
+
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: $tag-font-size;
+  color: $tag-text-color;
+  background-color: $tag-bg-color;
+  border-radius: 20px;
+}
+
+.tag-primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+.tag-secondary {
+  background-color: $secondary-color;
+  color: white;
+}
+
+.tag-danger {
+  background-color: $danger-color;
+  color: white;
+}
+
+.tag-success {
+  background-color: $success-color;
+  color: white;
+}
+
+
+
+// <span class="tag">Tag</span>
+// <span class="tag tag-primary">Primary Tag</span>
+// <span class="tag tag-secondary">Secondary Tag</span>
+// <span class="tag tag-danger">Danger Tag</span>
+// <span class="tag tag-success">Success Tag</span>
